@@ -16,8 +16,10 @@ public class Restaurant {
     private String location; 
 
 //constructor 
-public Restaurant() {
-
+public Restaurant(Long id, String name, String location) {
+this.id = id;
+this.name = name;
+this.location = location;
 }
 
 // getters and setters
@@ -45,5 +47,6 @@ public String getLocation() {
 public void setLocation(String location) {
     this.location = location;
 }
+
 
 }
