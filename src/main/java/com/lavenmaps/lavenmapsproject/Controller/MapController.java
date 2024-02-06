@@ -1,4 +1,4 @@
-package com.lavenmaps.lavenmapsproject.Controller;
+package com.lavenmaps.lavenmapsproject.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,16 +6,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 // Synchronous Handling
-@RestController
+
+@Controller
 public class MapController {
 
-@RequestMapping(value = "/index.html")
-public String homePage() {
-    return "index";
+    @RequestMapping(value = "/index")
+    public String homePage() {
+        return "index";
+    }
+
+    @RequestMapping(value = "/about")
+    public String aboutPage() {
+        return "about";
+    }
 }
 
-@RequestMapping("/restaurants")
-public String restaurants() {
-    return "Here are some restaurants.";
-}
-}
+
+
+
