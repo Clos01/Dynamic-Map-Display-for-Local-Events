@@ -1,0 +1,37 @@
+*{
+  /* border: .5px solid #000; */
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav{
+display: flex;
+ font-size: large;
+justify-content: flex-end;
+flex-wrap: nowrap;
+background-color: rgb(241, 216, 89);
+padding: 20px;
+
+}
+.nav ul {
+    display: flex;
+    gap: 8rem;
+  list-style: none;
+  padding: 0;
+  padding-right: 20px;
+
+}
+
+.nav ul li {
+  margin: 0 10px;
+
+}
+
+.nav ul li a { /* Targeting anchor tags directly */
+    text-decoration: none; /* Removes underline */
+    color: black; /* Sets text color to black */
+  }
+
+.right {
+}
