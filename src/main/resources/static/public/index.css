@@ -1,40 +1,72 @@
-*{
-  /* border: .5px solid #000; */
+* {
+  /* border: 0.5px solid #f30000; */
   padding: 0;
   margin: 0;
 }
 
-
-.nav{
-display: flex;
- font-size: large;
-justify-content: flex-end;
-flex-wrap: nowrap;
-background-color: rgb(241, 216, 89);
-padding: 20px;
-
+.nav {
+  display: flex;
+  font-size: large;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  background-color: rgba(255, 255, 255, 0.706);
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .nav ul {
-    display: flex;
-    gap: 8rem;
+  display: flex;
+  gap: 8rem;
   list-style: none;
   padding: 0;
   padding-right: 20px;
-
 }
 
 .nav ul li {
   margin: 0 10px;
-background-color: aliceblue;
-padding: 5px 10px 5px 10px;
-border-radius: 25px;
-
+  background-color: aliceblue;
+  padding: 5px 10px 5px 10px;
+  border-radius: 25px;
 }
 
-.nav ul li a { /* Targeting anchor tags directly */
-    text-decoration: none; /* Removes underline */
-    color: black; /* Sets text color to black */
-  }
+.nav ul li a {
+  /* Targeting anchor tags directly */
+  text-decoration: none; /* Removes underline */
+  color: black; /* Sets text color to black */
+}
 
-.right {
+.about-container {
+  position: relative; /* Make the container relative */
+  height: 10rem;
+  max-width: 100%;
+  margin-top: 0;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/images/world.jpeg);
+}
+
+.image-overlay {
+  position: absolute; /* Position overlay absolutely within the container */
+  left: 0;
+  right: 0;
+  width: 75%;
+  margin: auto; /* Centers the overlay horizontally */
+  height: 95%;
+  background-color: #000000bf;
+
+  color: rgb(255, 255, 255);
+}
+.image-overlay h2 {
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  font-size: 50px;
+  letter-spacing: 6px;
+}
+.image-overlay h3 {
+  display: flex;
+  font-size: medium;
+  width: 40rem;
+  text-align: center;
+  padding-top: 25px ;
+  margin:  auto;
 }
