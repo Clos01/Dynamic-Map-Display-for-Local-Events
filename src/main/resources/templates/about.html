@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
-<head>
+  <head>
     <title>About Page</title>
-</head>
-<link href="/public/index.css" rel="stylesheet" type="text/css">
-<body>
-    <div th:insert="fragments/nav :: nav"  ></div>
- <div class="about-container">
-    <div class="image-overlay">
-<h2 >
-    About 
-</h2>
-<div>
-    <h3>
-        to simplify finding and learning about local restaurants using cutting-edge technology. It showcases our passion for food and tech, making dining discovery seamless and enjoyable for everyone.
-</h3>
-</div>
-    </div>
- </div>
-</body>
+  </head>
+  <link href="/public/index.css" rel="stylesheet" type="text/css" />
+  <body class="bodyHtml">
+    <div th:insert="fragments/nav :: nav"></div>
+    <div class="about-container">
+      <div class="image-overlay">
+        <h2>About</h2>
+        <div>
+          <h3>
+            to simplify finding and learning about local restaurants using
+            cutting-edge technology. It showcases our passion for food and tech,
+            making dining discovery seamless and enjoyable for everyone.
+          </h3>
+          <div>
+         
+        </div>
+      </div>
+      <div class="backgroundAbout">
+
+          <div class="c">
+            <h3 class="dash-above ">
+                Why We built this 
+            </h3>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+  </div>
+  </body>
 </html>
