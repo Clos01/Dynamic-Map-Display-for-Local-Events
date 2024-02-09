@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/public/index.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
-    <!-- //? using thymeleaf annotaion for importing fragments in templates "th:insert="fragments/nav :: nav"  -->
     <div th:insert="fragments/nav :: nav"  ></div>
+    
+
+
+    <form class="search-form" action="/search" method="get">
+      <input class="search-input" type="text" placeholder="Search..." name="search">
+      <button class="search-button" type="submit">Search</button>
+    </form>
+    
 
 
 
-    <script src="public/indexJs.js"></script>
+       <script src="public/indexJs.js"></script>
 </body>
 </html>

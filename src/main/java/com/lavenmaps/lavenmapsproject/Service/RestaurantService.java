@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import com.lavenmaps.lavenmapsproject.Model.Restaurant;
 import com.lavenmaps.lavenmapsproject.Repository.RestaurantRepository;
 
-@Service
+@Service //service layer of an application
 public class RestaurantService {
 
-    @Autowired
+    @Autowired // automatic dependency injection satisfy bean dependencies by searching the application context for matching beans.  
     private RestaurantRepository restaurantRepository;
 
     public RestaurantService(RestaurantRepository restaurantRepository) {
