@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 }
-
+/* NavBar */
 .nav {
   display: flex;
   font-size: large;
@@ -33,7 +33,7 @@
   text-decoration: none; /* Removes underline */
   color: black; /* Sets text color to black */
 }
-
+/* AboutPage Header */
 .about-container {
   position: relative; /* Make the container relative */
   height: 10rem;
@@ -42,6 +42,7 @@
   background-size: cover;
   background-position: center center;
   background-image: url(/images/world.jpeg);
+  
 }
 
 .image-overlay {
@@ -69,4 +70,48 @@
   text-align: center;
   padding-top: 25px ;
   margin:  auto;
+}
+.bodyHtml{
+  background-color: rgb(247, 247, 247);
+}
+.c {
+  color: #000;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.c h3 {
+  letter-spacing: 2px;
+  font-size: 20px;
+  
+}
+
+h3.dash-above {
+  position: relative;
+}
+
+h3.dash-above::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust this value to change the height position of the dash */
+  left: 0;
+  width: 100px;
+  height: 4px;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgb(255, 106, 0), rgb(219, 143, 0), rgb(249, 126, 25), rgb(249, 91, 51), rgb(239, 100, 31), rgb(255, 91, 69), rgb(255, 17, 17));
+}
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+svg {
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
 }
