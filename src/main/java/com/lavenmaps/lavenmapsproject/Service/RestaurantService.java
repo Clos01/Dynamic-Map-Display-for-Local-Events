@@ -32,4 +32,9 @@ public Restaurant createUser(Restaurant restaurant) {
     return restaurantRepository.save(restaurant);
 }
 
+public List<Restaurant> searchByName(String name) {
+    return restaurantRepository.findByNameContainingIgnoreCase(name);
+}
+
+
 }
