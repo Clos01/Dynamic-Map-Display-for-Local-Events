@@ -8,45 +8,44 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Restaurant {
-    //Attributes 
+    // Attributes
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String location; 
+    private String location;
 
-//constructor 
-public Restaurant(Long id, String name, String location) {
-this.id = id;
-this.name = name;
-this.location = location;
-}
+    // constructor
+    public Restaurant(Long id, String name, String location) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+    }
 
-// getters and setters
+    // getters and setters
 
-public Long getId() {
-    return id; 
-}
+    public Long getId() {
+        return id;
+    }
 
-public void setId(Long id) {
-    this.id = id;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public String getName() {
-    return name;
-}
+    public String getName() {
+        return name;
+    }
 
-public void setName(String name) {
-    this.name = name; 
-}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-public String getLocation() {
-    return location;
-}
+    public String getLocation() {
+        return location;
+    }
 
-public void setLocation(String location) {
-    this.location = location;
-}
-
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
 }

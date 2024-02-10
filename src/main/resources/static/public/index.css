@@ -1,0 +1,117 @@
+* {
+  /* border: 0.5px solid #f30000; */
+  padding: 0;
+  margin: 0;
+}
+/* NavBar */
+.nav {
+  display: flex;
+  font-size: large;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  background-color: rgba(255, 255, 255, 0.706);
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.nav ul {
+  display: flex;
+  gap: 8rem;
+  list-style: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+.nav ul li {
+  margin: 0 10px;
+  background-color: aliceblue;
+  padding: 5px 10px 5px 10px;
+  border-radius: 25px;
+}
+
+.nav ul li a {
+  /* Targeting anchor tags directly */
+  text-decoration: none; /* Removes underline */
+  color: black; /* Sets text color to black */
+}
+/* AboutPage Header */
+.about-container {
+  position: relative; /* Make the container relative */
+  height: 10rem;
+  max-width: 100%;
+  margin-top: 0;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/images/world.jpeg);
+  
+}
+
+.image-overlay {
+  position: absolute; /* Position overlay absolutely within the container */
+  left: 0;
+  right: 0;
+  width: 75%;
+  margin: auto; /* Centers the overlay horizontally */
+  height: 95%;
+  background-color: #000000bf;
+
+  color: rgb(255, 255, 255);
+}
+.image-overlay h2 {
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  font-size: 50px;
+  letter-spacing: 6px;
+}
+.image-overlay h3 {
+  display: flex;
+  font-size: medium;
+  width: 40rem;
+  text-align: center;
+  padding-top: 25px ;
+  margin:  auto;
+}
+.bodyHtml{
+  background-color: rgb(247, 247, 247);
+}
+.c {
+  color: #000;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.c h3 {
+  letter-spacing: 2px;
+  font-size: 20px;
+  
+}
+
+h3.dash-above {
+  position: relative;
+}
+
+h3.dash-above::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust this value to change the height position of the dash */
+  left: 0;
+  width: 100px;
+  height: 4px;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgb(255, 106, 0), rgb(219, 143, 0), rgb(249, 126, 25), rgb(249, 91, 51), rgb(239, 100, 31), rgb(255, 91, 69), rgb(255, 17, 17));
+}
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+svg {
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}

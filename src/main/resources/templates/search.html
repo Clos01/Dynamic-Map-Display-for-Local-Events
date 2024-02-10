@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/public/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div th:insert="fragments/nav :: nav"  ></div>
+    
+
+
+    <form   id='searchForm'class="search-form" action="/search" method="get">
+      <input id="searchInput" class="search-input" type="text" placeholder="Search..." name="search">
+      <button class="search-button" type="submit">Search</button>
+    </form>
+    <!--results will display below -->
+<div id="searchResult" >
+
+</div>
+
+
+       <script src="/src/main/resources/static/public/Search.js"></script>
+</body>
+</html>
