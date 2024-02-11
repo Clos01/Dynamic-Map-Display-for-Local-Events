@@ -18,7 +18,7 @@ public class RestaurantService {
     public RestaurantService(RestaurantRepository restaurantRepository) {
         this.restaurantRepository = restaurantRepository;
     }
-
+//restaurant model class below
     public List<Restaurant> getAllUsers() {
         return restaurantRepository.findAll();
     

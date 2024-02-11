@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@RestController
+@RestController //Controller + ResponseBody 
 @RequestMapping("/api/restaurants")
 public class SearchController {
 
