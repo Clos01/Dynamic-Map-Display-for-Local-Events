@@ -15,6 +15,11 @@ public class Restaurant {
     private String name;
     private String location;
 
+
+    public Restaurant() {
+        
+    }
+
     // constructor
     public Restaurant(Long id, String name, String location) {
         this.id = id;

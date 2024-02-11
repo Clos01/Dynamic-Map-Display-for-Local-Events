@@ -1,6 +1,6 @@
-const { createElement } = require("react");
+// const { createElement } = require("react");
 
-const searchForm = document.getElementById('searchform');
+const searchForm = document.getElementById('searchForm');
 const searchTermInput = document.getElementById('searchInput');
 const searchResult = document.getElementById('searchResult');
 
@@ -21,7 +21,7 @@ if(!searchTerm){
 // document.body.appendChild(errorDiv);
 }
 //have to prepare the xhr which in js means to create htpp requests but new modern use fetch()
-fetch('/api/restaurants/search')
+fetch(`/api/restaurants/search?name=${encodeURIComponent(searchTerm)}`)
 .then(data =>{
     return data.json();
 })
