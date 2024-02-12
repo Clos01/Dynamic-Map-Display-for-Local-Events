@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MapController {
 
 
-	@Value("${api.key}")
-private String apiKey;
+// 	@Value("${api.key}")
+// private String apiKey;
 
-    @RequestMapping(value = "/AutoAddress")
-    public String googleSearch(Model model) {
-        model.addAttribute("apiKey", apiKey);
-        return "AutoAddress";
-    }
+    // @RequestMapping(value = "/AutoAddress")
+    // public String googleSearch(Model model) {
+    //     model.addAttribute("apiKey", apiKey);
+    //     return "AutoAddress";
+    // }
     
 
 

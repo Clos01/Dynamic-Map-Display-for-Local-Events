@@ -1,32 +1,26 @@
 package com.lavenmaps.lavenmapsproject.controller;
 
-import java.util.List;
-
-import org.hibernate.mapping.Collection;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.lavenmaps.lavenmapsproject.Model.Restaurant;
-import com.lavenmaps.lavenmapsproject.Repository.RestaurantRepository;
-import com.lavenmaps.lavenmapsproject.Service.RestaurantService;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+import com.lavenmaps.lavenmapsproject.Service.PlacesService;
 
 @RestController //Controller + ResponseBody 
-@RequestMapping("/api/restaurants")
+@RequestMapping("/api/places")
 public class SearchController {
 
-        @Autowired
-        private RestaurantService restaurantService;
+         private final PlacesService placesService;
         
- @GetMapping("/search")
-    public ResponseEntity<List<Restaurant>> searchRestaurants(@RequestParam String name) {
-        List<Restaurant> restaurants = restaurantService.searchByName(name);
-        return ResponseEntity.ok(restaurants);
-    }
+         public SearchController(PlacesService placesService) {
+            this.placesService = placesService;
+        }
+ 
+        @GetMapping("/nearbyRestaurants")
+        public Optional<String> getNearbyRestaurants(@RequestParam String location, @RequestParam int radius) {
+            return placesService.getNearbyRestaurants(location, radius);
+}
 }
