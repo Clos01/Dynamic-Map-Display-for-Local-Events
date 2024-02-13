@@ -1,18 +1,23 @@
-fetch('/api/places/nearbyRestaurants?location=35.7796,-78.6382&radiusInMeters=3218&keyword=mexican')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data); // Now 'data' is a JavaScript object
-    displayData(data); // Function to handle the display of this data
-  })
-  .catch(error => console.error('Error fetching data: ', error));
-  function displayData(data) {
-    const resultsContainer = document.getElementById('results'); // Assume you have a div with this id in your HTML
-    resultsContainer.innerHTML = ''; // Clear previous results
-    
-    data.results.forEach(place => {
-      const placeElement = document.createElement('div');
-      placeElement.textContent = place.name; // Add other details you want to display
-      resultsContainer.appendChild(placeElement);
-    });
-  }
-  
+// Assume you have an empty <ul id="placesList"></ul> in your search.html
+
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission from reloading the page
+
+    const location = document.getElementById('location').value;
+    const radiusInMeters = document.getElementById('radiusInMeters').value;
+    const keyword = document.getElementById('keyword').value;
+    const url = `/api/places/nearbyRestaurants?location=${location}&radiusInMeters=${radiusInMeters}&keyword=${keyword}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const placesList = document.getElementById('placesList');
+            placesList.innerHTML = ''; // Clear previous results
+            data.results.forEach(place => {
+                const listItem = document.createElement('li');
+                listItem.textContent = place.name; // Assuming 'name' is part of your DTO and returned JSON
+                placesList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error fetching places:', error));
+});

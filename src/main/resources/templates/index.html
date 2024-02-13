@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="/public/index.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
+    <link href="/public/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
     <!-- //? using thymeleaf annotaion for importing fragments in templates "th:insert="fragments/nav :: nav"  -->
-    <div th:insert="~{fragments/nav :: nav}"  ></div>
-
-
+    <div th:insert="~{fragments/nav :: nav}"></div>
 
     <script src="../public/search.js"></script>
-</body>
+  </body>
 </html>

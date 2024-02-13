@@ -9,25 +9,21 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 // Synchronous Handling
 
 @Controller
 public class MapController {
 
-
-	@Value("${api.key}")
-private String apiKey;
+    @Value("${api.key}")
+    private String apiKey;
 
     // @RequestMapping(value = "/AutoAddress")
     // public String googleSearch(Model model) {
-    //     model.addAttribute("apiKey", apiKey);
-    //     return "AutoAddress";
-    // }
-    
+    // model.addAttribute("apiKey", apiKey);
+    // return "AutoAddress";
+    // } 
 
-
-    //handling using Thymeleaf  for html pages looks in the templates 
+    // handling using Thymeleaf for html pages looks in the templates
     @RequestMapping(value = "/index")
     public String homePage() {
         return "index";
@@ -38,11 +34,8 @@ private String apiKey;
         return "about";
     }
     @RequestMapping(value = "/search")
-    public String searchPage() {
+    public String searchPage(Model model) {
+        model.addAttribute("apiKey", apiKey);
         return "search";
     }
 }
-
-
-
-

@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.lavenmaps.lavenmapsproject.Service.PlacesService;
-import java.util.Optional;
+import com.lavenmaps.lavenmapsproject.dto.PlacesSearchResponse;
 
+import java.util.Optional;
 @RestController
 @RequestMapping("/api/places")
 public class SearchController {
@@ -19,7 +20,7 @@ public class SearchController {
     }
 
     @GetMapping("/nearbyRestaurants")
-    public Optional<String> getNearbyRestaurants(
+    public Optional<PlacesSearchResponse> getNearbyRestaurants(
             @RequestParam String location, 
             @RequestParam int radiusInMeters, 
             @RequestParam String keyword) {
