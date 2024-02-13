@@ -16,21 +16,12 @@ public class Restaurant {
     private String location;
 
     // constructor
-    public Restaurant(Long id, String name, String location) {
-        this.id = id;
+    public Restaurant(String name, String location) {
         this.name = name;
         this.location = location;
     }
 
     // getters and setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

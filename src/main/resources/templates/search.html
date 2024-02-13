@@ -8,20 +8,20 @@
 </head>
 <body>
     <div th:insert="fragments/nav :: nav"  ></div>
+    <h1>Find Restaurants Near You</h1>
+    <form action="/api/places/nearbyRestaurants" method="get">
+      <label for="keyword">Keyword (e.g., pizza, McDonald's):</label>
+      <input type="text" id="keyword" name="keyword" required>
   
-    
-    <h1>Find restaurants Near you! </h1>
-<form action="">
-
-
-
-
-
-
-
-
-</form>
-
+      <label for="location">Location (latitude,longitude):</label>
+      <input type="text" id="location" name="location" required>
+  
+      <label for="radiusInMeters">Radius (in meters):</label>
+      <input type="number" id="radiusInMeters" name="radiusInMeters" required>
+      
+      <button type="submit">Search</button>
+  </form>
+  
 
 
 

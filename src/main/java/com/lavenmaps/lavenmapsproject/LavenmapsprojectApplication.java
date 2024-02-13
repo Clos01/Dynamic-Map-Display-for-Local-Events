@@ -5,23 +5,20 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-
-
-
-
 @SpringBootApplication
 public class LavenmapsprojectApplication {
 
-	@Value("${api.key}")
-private String apiKey;
+    // This field will hold the value of 'api.key' from your application.properties file
+    @Value("${api.key}")
+    private String apiKey;
 
-	public static void main(String[] args) {
-		SpringApplication.run(LavenmapsprojectApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(LavenmapsprojectApplication.class, args);
+    }
 
-	}
-	@Bean
-	  public RestTemplate getRestTemplate() {
-		 return new RestTemplate();
-	  }
-
+    // Define a bean for RestTemplate which is used to make HTTP requests
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }
