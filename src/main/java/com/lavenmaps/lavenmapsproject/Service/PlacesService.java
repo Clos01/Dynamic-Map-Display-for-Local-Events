@@ -18,10 +18,10 @@ public class PlacesService {
   @Value("${api.key}")
   private String apiKey;
   // Fetch nearby restaurants and return them as a DTO
-    public Optional<PlacesSearchResponse> getNearbyRestaurants(String location, int radiusInMeters, String keyword) {
+    public Optional<PlacesSearchResponse> getNearbyRestaurants(String location, int radius, String keyword) {
         String url = String.format(
                 "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s&radius=%d&type=restaurant&keyword=%s&key=%s",
-                location, radiusInMeters, keyword, apiKey);
+                location, radius, keyword, apiKey);
         
         // Fetch data from the API
         PlacesSearchResponse response = restTemplate.getForObject(url, PlacesSearchResponse.class);

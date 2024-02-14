@@ -22,8 +22,8 @@ public class SearchController {
     @GetMapping("/nearbyRestaurants")
     public Optional<PlacesSearchResponse> getNearbyRestaurants(
             @RequestParam String location, 
-            @RequestParam int radiusInMeters, 
+            @RequestParam int radius, 
             @RequestParam String keyword) {
-        return placesService.getNearbyRestaurants(location, radiusInMeters, keyword);
+        return placesService.getNearbyRestaurants(location, radius, keyword);
     }
 }

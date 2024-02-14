@@ -3,34 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="/public/index.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div th:insert="fragments/nav :: nav"></div>
-   
+    <title>Search for Nearby Restaurants</title>
+    <link href="public/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div th:insert="~{fragments/nav :: nav}"></div>
     <h1>Search for Nearby Restaurants</h1>
-    <form id="searchForm">
+    <form id="searchForm" onsubmit="return false;">
+        <!-- <div>
+            <label for="location">Location (latitude,longitude):</label>
+            <input type="text" id="location" name="location" required>
+        </div> -->
+        <label for="cityName">City Name:</label>
+<input type="text" id="cityName" name="cityName" required>
+        <label for="radius">Radius(in miles):</label>
+        <input type="number" id="radius" name="radius" required>
+        
         <div>
             <label for="keyword">Keyword (e.g., pizza, McDonald's):</label>
             <input type="text" id="keyword" name="keyword" required>
         </div>
-        <div>
-            <label for="location">Location (latitude,longitude):</label>
-            <input type="text" id="location" name="location" placeholder="e.g., 40.712776,-74.005974" required>
-        </div>
-        <div>
-            <label for="radiusInMeters">Radius (in meters):</label>
-            <input type="number" id="radiusInMeters" name="radiusInMeters" required>
-        </div>
         <button type="submit">Search</button>
     </form>
     <div id="results">
-        <!-- Search results will be displayed here -->
         <h2>Results</h2>
         <ul id="resultsList"></ul>
     </div>
-
-    <script type="text/javascript" src="../static/Js/search.js"></script>
-  </body>
-</html>
+    <script type="text/javascript" src="Js/search.js"></script>
+</body>

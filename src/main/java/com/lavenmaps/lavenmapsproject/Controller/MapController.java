@@ -21,7 +21,7 @@ public class MapController {
     // public String googleSearch(Model model) {
     // model.addAttribute("apiKey", apiKey);
     // return "AutoAddress";
-    // } 
+    // }
 
     // handling using Thymeleaf for html pages looks in the templates
     @RequestMapping(value = "/index")
@@ -32,8 +32,8 @@ public class MapController {
     @RequestMapping(value = "/about")
     public String aboutPage() {
         return "about";
-    }
-    @RequestMapping(value = "/search")
+
+    }@RequestMapping(value = "/search")
     public String searchPage(Model model) {
         model.addAttribute("apiKey", apiKey);
         return "search";
